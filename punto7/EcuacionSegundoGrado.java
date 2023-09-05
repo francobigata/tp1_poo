@@ -1,0 +1,35 @@
+package ar.edu.unlu.prog1.punto7;
+
+public class EcuacionSegundoGrado {
+    private final double a;
+    private final double b;
+    private final double c;
+
+    public EcuacionSegundoGrado(double a, double b ,double c){
+        this.a = a;
+        this.b= b;
+        this.c = c;
+    }
+
+    public double calcularDiscriminante(){
+        return (b * b) - (4 * a * c);
+    }
+
+    public double[] calcularRaices(){
+        double discriminante = calcularDiscriminante();
+        if ( discriminante > 0){
+            double raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+            double raiz2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+            return new double[]{raiz1, raiz2};
+        }else if (discriminante == 0){
+            double raizUnica = -b / (2 * a);
+            return new double[]{raizUnica};
+        }else {
+            return new double[]{};
+        }
+    }
+
+    public double calcularY(double x){
+        return a * x * x + b * x +c;
+    }
+}
