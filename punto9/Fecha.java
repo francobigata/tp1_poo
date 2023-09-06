@@ -36,6 +36,16 @@ public class Fecha {
         System.out.println("Fecha 4 es mayor que Fecha 5: " + fechaEsMayor(fecha4, fecha5));
         System.out.println("Fecha 4 es menor que Fecha 5: " + fechaEsMenor(fecha4, fecha5));
         System.out.println("Fecha 4 está entre Fecha 5 y Fecha 6: " + fechaEstaEntre(fecha4, fecha5, fecha6));
+
+
+        System.out.println("Fecha 4 (dd-MM-yyyy): " + fecha4.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
+        System.out.println("Fecha 4 (MM-dd-yyyy): " + fecha4.format(DateTimeFormatter.ofPattern("MM-dd-yyyy")));
+
+        System.out.println("Fecha 5 (dd-MM-yyyy): " + fecha5.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
+        System.out.println("Fecha 5 (MM-dd-yyyy): " + fecha5.format(DateTimeFormatter.ofPattern("MM-dd-yyyy")));
+
+        System.out.println("Fecha 6 (dd-MM-yyyy): " + fecha6.format(DateTimeFormatter.ofPattern("dd-MM-yyyy")));
+        System.out.println("Fecha 6 (MM-dd-yyyy): " + fecha6.format(DateTimeFormatter.ofPattern("MM-dd-yyyy")));
     }
 
 }
